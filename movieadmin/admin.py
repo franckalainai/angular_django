@@ -1,6 +1,6 @@
 from django.contrib import admin
 # Register your models here.
-from .models import Book, BookNumber
+from .models import Book, BookNumber, Character
 
 #admin.site.register(Book)
 
@@ -11,4 +11,5 @@ class BookAdmin(admin.ModelAdmin):
     search_fields = ['title', 'description']
 
 admin.site.register(BookNumber)
+admin.site.register(Character)
 
