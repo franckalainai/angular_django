@@ -1,6 +1,6 @@
 from django.contrib import admin
 # Register your models here.
-from .models import Book
+from .models import Book, BookNumber
 
 #admin.site.register(Book)
 
@@ -9,3 +9,6 @@ class BookAdmin(admin.ModelAdmin):
     list_display = ['title', 'price']
     list_filter = ['published']
     search_fields = ['title', 'description']
+
+admin.site.register(BookNumber)
+
