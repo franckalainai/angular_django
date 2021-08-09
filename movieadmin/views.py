@@ -5,4 +5,5 @@ from .models import Book
 from django.shortcuts import render
 
 def first(request):
-    return render(request, 'myproject_temp.html')
+    books = Book.objects.all()
+    return render(request, 'myproject_temp.html', {'books': books})
